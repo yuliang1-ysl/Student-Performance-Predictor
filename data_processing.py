@@ -16,14 +16,14 @@ class StudentDataProcessor:
 
     def load_data(self):
 
-        # Get the folder where this Python file is located
+        # 获取文件所在的文件夹路径
         folder = os.path.dirname(__file__)
 
         # Build full file paths
         math_path = os.path.join(folder, "student-mat.csv")
         por_path = os.path.join(folder, "student-por.csv")
 
-        # Read CSV files
+        # 读取 CSV 文件
         math = pd.read_csv(math_path, sep=";")
         portuguese = pd.read_csv(por_path, sep=";")
 
@@ -82,7 +82,6 @@ class StudentDataProcessor:
     
     def feature_engineering(self):
 
-        # Pass or Fail
         self.df["pass"] = self.df["final_grade"].apply(
             lambda x: "Pass" if x >= 10 else "Fail"
         )
