@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/30622203/README.md)
 # Student Academic Performance Predictor
 
 ## Project Description
